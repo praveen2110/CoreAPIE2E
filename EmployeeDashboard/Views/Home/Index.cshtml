@@ -1,0 +1,40 @@
+﻿@using Employee.Data.Model
+@model IEnumerable<Department>
+
+@{ 
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>
+                Department ID
+            </th>
+            <th>
+                Department Name
+            </th>
+        </tr>
+
+        @foreach (Department dep in Model)
+        {
+            <tr>
+                <td>
+                    @dep.DepartmentId
+                </td>
+
+                <td>
+                    @dep.DepartmentName
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
